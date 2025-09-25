@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doce Cascata — Aluguel de Cascata de Chocolate para Eventos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Aluguel de cascata de chocolate para festas, aniversários, casamentos e eventos corporativos. Pacotes completos com frutas, acompanhamentos e montagem no local.">
+</head>
+<body>
+  <div class="topbar">
+    <span>Atendemos festas, casamentos e eventos corporativos</span>
+    <a class="topbar__cta" href="https://wa.me/551999383908?text=Olá,%20quero%20um%20orçamento%20da%20Doce%20Cascata!" aria-label="Peça um orçamento pelo WhatsApp">Peça um orçamento</a>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Doce Cascata">
+    </div>
+    <nav aria-label="Menu principal">
+      <a href="#servicos" aria-label="Ir para a seção de serviços">Serviços</a>
+      <a href="#pacotes" aria-label="Ir para a seção de pacotes">Pacotes</a>
+      <a href="#galeria" aria-label="Ver nossa galeria de fotos">Galeria</a>
+      <a href="#contato" aria-label="Ir para a seção de contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1>
+          Transforme seu evento com uma
+          <span class="choco">cascata de chocolate</span>
+        </h1>
+        <p>
+          Experiência deliciosa, montagem profissional e acompanhamentos fresquinhos.
+          Você só aproveita!
+        </p>
+
+        <div class="hero__actions">
+          <a
+            class="btn btn--primary"
+            href="https://wa.me/551999383908?text=Quero%20um%20orçamento%20para%20cascata%20de%20chocolate"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pedir orçamento no WhatsApp"
+          >
+            🍫 Pedir orçamento no WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#pacotes" aria-label="Ver os pacotes disponíveis">
+            📦 Ver pacotes
+          </a>
+        </div>
+
+        <ul class="badges">
+          <li>✔ Buffet completo</li>
+          <li>✔ Montagem no local</li>
+          <li>✔ Higiene e segurança</li>
+        </ul>
+      </div>
+
+      <figure class="hero__image">
+        <img
+          src="imagens/cascataEvento.jpeg"
+          alt="Cascata de chocolate em evento com frutas e doces"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="container features" id="servicos">
+    <article class="card">
+      <img src="imgs/icone-chocolate.svg" alt="" />
+      <h3>Chocolate Nobre</h3>
+      <p>Usamos chocolate de alta qualidade, com derretimento perfeito e sabor inesquecível.</p>
+    </article>
+    <article class="card">
+      <img src="imgs/icone-frutas.svg" alt="" />
+      <h3>Acompanhamentos</h3>
+      <p>Frutas selecionadas, marshmallow, biscoitos e opções personalizadas para o seu evento.</p>
+    </article>
+    <article class="card">
+      <img src="imgs/icone-equipe.svg" alt="" />
+      <h3>Equipe Profissional</h3>
+      <p>Chegamos com antecedência, montamos, servimos e deixamos tudo limpinho no final.</p>
+    </article>
+  </section>
+
+  <section class="container pricing" id="pacotes">
+    <h2>Pacotes</h2>
+    <div class="pricing__grid">
+      <div class="price-card">
+        <h3>MESA TRADICIONAL</h3>
+        <p class="price">Sob consulta</p>
+        <ul>
+            <li>Até 100 pessoas</li>
+          <li>2 tipos de chocolate</li>
+          <li>5 acompanhamentos</li>
+          <li>Atendimento por 3h</li>
+        </ul>
+        <a class="btn btn--primary" href="https://wa.me/551999383908?text=Quero%20o%20Pacote%20Essencial" aria-label="Quero o Pacote Essencial">Quero este</a>
+      </div>
+      <div class="price-card price-card--highlight">
+        <div class="tag">Mais escolhido</div>
+        <h3>Premium</h3>
+        <p class="price">R$ 790</p>
+        <ul>
+          <li>Até 100 pessoas</li>
+          <li>2 tipos de chocolate</li>
+          <li>5 acompanhamentos</li>
+          <li>Atendimento por 3h</li>
+        </ul>
+        <a class="btn btn--primary" href="https://wa.me/551999383908?text=Quero%20o%20Pacote%20Premium" aria-label="Quero o Pacote Premium">Quero este</a>
+      </div>
+      <div class="price-card">
+        <h3>Corporativo</h3>
+        <p class="price">Sob consulta</p>
+        <ul>
+          <li>Acima de 100 pessoas</li>
+          <li>Personalização de marca</li>
+          <li>Equipe extra</li>
+          <li>Contrato para eventos</li>
+        </ul>
+        <a class="btn" href="https://wa.me/551999383908?" aria-label="Solicitar proposta por e-mail">Solicitar proposta</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container gallery" id="galeria">
+    <h2>Galeria</h2>
+    <div class="gallery__wrapper">
+      <button id="prevBtn" class="gallery__btn gallery__btn--prev" aria-label="Ver imagem anterior">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="gallery__grid">
+        <img src="imagens/imagem4.jpeg" alt="Detalhe do chocolate" width="500" height="333" />
+        <img src="imagens/imagem5.jpeg" alt="Serviço completo" width="500" height="333" />
+        <img src="imagens/imagem6.jpeg" alt="Evento corporativo" width="500" height="333" />
+        <img src="imagens/imagem7.jpeg" alt="Evento corporativo" width="500" height="333" />
+        <img src="imagens/imagem8.jpeg" alt="Evento corporativo" width="500" height="333" />
+        <img src="imagens/imagem9.jpeg" alt="Evento corporativo" width="500" height="333" />
+        <img src="imagens/imagem10.jpeg" alt="Evento corporativo" width="500" height="333" />
+        <img src="imagens/imagem11.jpeg" alt="Evento corporativo" width="500" height="333" />
+      </div>
+      <button id="nextBtn" class="gallery__btn gallery__btn--next" aria-label="Ver próxima imagem">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+ <section class="video-banner">
+  <h2>🎥 Vídeo de Apresentação</h2>
+  <div class="video-container">
+    <video src="video/Mesa Realeza Vídeo.mp4" autoplay loop muted playsinline controls>
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>
+</section>
+
+
+
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo" href="#">Doce <span>Cascata</span></a>
+        <p>CNPJ 00.000.000/0001-00</p>
+        <p>Doocecascata@gmail.com</p>
+      </div>
+      <div class="footer__links">
+        <a href="#servicos">Serviços</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/doocecascata?igsh=MXFiMmlxbml0YXZydw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+        <a href="https://wa.me/551999383908" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="ano"></span> Doce Cascata — Todos os direitos reservados.</p>
+
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/551999383908?text=Olá,%20quero%20um%20orçamento!" aria-label="Abrir conversa no WhatsApp">💬</a>
+
+  <script>
+    // Atualiza ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

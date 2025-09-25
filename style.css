@@ -1,0 +1,483 @@
+:root {
+  --background: #ffffff;       /* fundo principal */
+  --panel: #f9f9f9;           /* blocos */
+  --soft: #f0f0f0;            /* detalhes de fundo */
+  --text: #222222;            /* texto principal */
+  --muted: #666666;           /* texto secundário */
+  --brand: #4e2a1e;           /* marrom chocolate */
+  --brand-2: #7b4a34;         /* marrom mais claro */
+  --accent: #d2691e;          /* marrom alaranjado (detalhes opcionais) */
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg, var(--bg), #0b0b0b);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* Helpers */
+.container{width:min(1100px, 92vw); margin-inline:auto}
+img{max-width:100%; display:block; border-radius:12px}
+h1,h2,h3{line-height:1.2; margin:0 0 .5rem}
+h2{font-size:clamp(1.6rem,2.5vw,2rem)}
+p{margin:.25rem 0 .75rem}
+
+/* Topbar */
+.topbar{
+  background:linear-gradient(90deg, var(--brand), var(--brand-2));
+  color:#fff; font-weight:600; padding:.5rem 1rem; text-align:center
+}
+.topbar__cta{
+  background:#fff; color:#000; padding:.35rem .7rem; border-radius:999px; margin-left:.75rem; text-decoration:none
+}
+
+/* Header */
+.header{display:flex; align-items:center; justify-content:space-between; padding:1rem 0}
+.logo{font-weight:700; font-size:1.25rem; text-decoration:none; color:#7b4a34}
+.logo span{color:#eac39c}
+.nav{display:flex; gap:1rem; align-items:center}
+.nav a{color:#fff; text-decoration:none; opacity:.9}
+.nav a:hover{opacity:1}
+.btn{
+  display:inline-block; padding:.7rem 1rem; border-radius:999px; border:1px solid #fff2; text-decoration:none; color:#fff
+}
+.btn--primary{background:linear-gradient(90deg,var(--brand),var(--brand-2)); border-color:transparent}
+.btn--ghost{background:transparent}
+.hamburger{display:none; font-size:1.5rem; cursor:pointer}
+.menu-toggle{display:none}
+@media (max-width: 860px){
+  .hamburger{display:block}
+  .nav{
+    position:absolute; inset:70px 0 auto 0; background:var(--panel);
+    display:grid; gap:0; padding:1rem; transform:scaleY(0); transform-origin:top; transition:.2s; box-shadow:var(--shadow)
+  }
+  .menu-toggle:checked ~ .nav{transform:scaleY(1)}
+}
+
+/* Hero */
+/* Hero Section */
+.hero {
+  padding: 3rem 0 4rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%); /* fundo branco suave */
+}
+/* Imagem */
+.hero__image img {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  height: 100%; /* Permite que a imagem preencha a altura do seu container */
+}
+
+/* Grid */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Título */
+.hero__text h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: #4e2a1e; /* marrom forte */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.hero__text p {
+  color: #555; /* cinza escuro para boa leitura */
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botões e ações */
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.hero__actions .btn {
+  background: #7b4a34; /* marrom médio */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero__actions .btn:hover {
+  background: #4e2a1e; /* marrom mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.badges li {
+  font-size: 1rem;
+  color: #7b4a34; /* marrom para combinar */
+  font-weight: 500;
+}
+
+/* Imagem */
+.hero__image img {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+/* Responsivo */
+@media (max-width: 860px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+}
+
+
+/* Cards de features */
+.features{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; padding:2rem 0}
+.features .card{
+  background:var(--panel); padding:1.2rem; border-radius:var(--radius); box-shadow:var(--shadow); border:1px solid #ffffff14
+}
+.features .card img{width:42px; margin-bottom:.5rem}
+
+/* Steps */
+.steps{padding:2rem 0}
+.steps h2{margin-bottom:.75rem}
+.steps__grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem}
+.step{background:var(--soft); padding:1rem; border-radius:var(--radius); border:1px solid #ffffff10}
+.step span{
+  display:inline-grid; place-items:center; width:34px; height:34px; border-radius:50%;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2)); font-weight:700; margin-bottom:.25rem
+}
+@media (max-width:860px){ .steps__grid{grid-template-columns:repeat(2,1fr)} }
+
+/* Pricing */
+.pricing{padding:2rem 0}
+.pricing__grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
+.price-card{
+  background:var(--panel); padding:1.2rem; border-radius:var(--radius); border:1px solid #ffffff14; position:relative
+}
+.price-card h3{margin-top:0}
+.price{font-size:1.8rem; font-weight:700; margin:.4rem 0 .6rem}
+.price-card ul{padding-left:1rem; margin:0 0 1rem}
+.price-card--highlight{outline:2px solid var(--brand); transform:translateY(-4px)}
+.price-card .tag{
+  position:absolute; top:-10px; right:12px; background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  padding:.25rem .5rem; border-radius:8px; font-size:.8rem
+}
+@media (max-width:860px){ .pricing__grid{grid-template-columns:1fr} }
+
+/* Galeria */
+.gallery{padding:2rem 0}
+.gallery__grid{display:grid; grid-template-columns:repeat(6,1fr); gap:.5rem}
+.gallery__grid img{aspect-ratio:1/1; object-fit:cover}
+@media (max-width:860px){ .gallery__grid{grid-template-columns:repeat(3,1fr)} }
+
+/* Depoimentos */
+.testimonials{padding:2rem 0}
+.testimonials__grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
+blockquote{
+  background:var(--panel); padding:1rem; border-radius:var(--radius); border:1px solid #ffffff14; font-style:italic
+}
+cite{display:block; margin-top:.5rem; color:#eac39c; font-style:normal}
+@media (max-width:860px){ .testimonials__grid{grid-template-columns:1fr} }
+
+/* FAQ */
+.faq details{
+  background:var(--panel); padding:1rem; border-radius:var(--radius); border:1px solid #ffffff14; margin-bottom:.6rem
+}
+.faq summary{cursor:pointer; font-weight:600}
+
+/* Formulário */
+.contact{padding:2rem 0}
+.form{background:var(--panel); padding:1rem; border-radius:var(--radius); border:1px solid #ffffff14}
+.form__row{display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-bottom:.75rem}
+.form input, .form textarea{
+  width:100%; background:#0f0f0f; border:1px solid #ffffff1a; border-radius:10px; padding:.8rem; color:#fff
+}
+.form button{width:100%}
+@media (max-width:860px){ .form__row{grid-template-columns:1fr} }
+
+/* Footer */
+.footer{margin-top:2rem; background:#0a0a0a; padding:1.5rem 0; border-top:1px solid #ffffff0f}
+.footer__grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem}
+.footer__links, .footer__social{display:grid; gap:.4rem}
+.copy{text-align:center; color:#9b9b9b; margin:1rem 0 0}
+@media (max-width:860px){ .footer__grid{grid-template-columns:1fr} }
+
+/* Botão flutuante WhatsApp */
+.whatsapp{
+  position:fixed; right:18px; bottom:18px; width:56px; height:56px; border-radius:50%;
+  display:grid; place-items:center; background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  color:#fff; text-decoration:none; box-shadow:var(--shadow); font-size:1.25rem
+}
+
+/* Acentos */
+.choco{
+  background:linear-gradient(90deg, #eac39c, #cfa47b, #a87452);
+  -webkit-background-clip:text; background-clip:text; color:transparent
+}
+/* Header */
+header {
+  background: #ffffff; /* Fundo branco puro para combinar com a logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elegante */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #e0e0e0; /* Linha sutil na parte inferior para simular a "cascata" suavemente */
+}
+
+/* Logo */
+header .logo img {
+  height: 90px; /* Um pouco maior para destaque */
+  width: auto;
+  object-fit: contain;
+  /* Não é necessário sombra aqui, a logo já tem seu estilo */
+}
+
+/* Navegação */
+header nav {
+  display: flex;
+  gap: 35px; /* Mais espaço entre os itens */
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 19px; /* Levemente maior para melhor leitura */
+  font-weight: 600;
+  color: #4e2a1e; /* Marrom escuro da sua marca para os links */
+  transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease; /* Adicionando transform para hover */
+  padding-bottom: 5px; /* Mais padding para o destaque */
+  position: relative; /* Para o efeito de cascata inferior */
+}
+
+/* Efeito ao passar o mouse */
+header nav a:hover {
+  color: #7b4a34; /* Marrom chocolate mais claro para o hover */
+  transform: translateY(-2px); /* Efeito sutil de elevação */
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px; /* Espessura da "linha de chocolate" */
+  background: linear-gradient(90deg, #7b4a34, #d2691e); /* Degradê de chocolate para a linha */
+  transition: width 0.3s ease-out;
+}
+
+header nav a:hover::after {
+  width: 100%; /* A linha de "chocolate" se expande ao passar o mouse */
+}
+
+
+/* Adicionando responsividade para o menu de navegação, caso ainda não tenha */
+@media (max-width: 860px) {
+  header {
+    padding: 15px 20px; /* Ajusta o padding em telas menores */
+  }
+
+  header nav {
+    display: none; /* Esconde a navegação padrão em mobile */
+  }
+
+  /* Você precisaria de um ícone de hambúrguer e JavaScript para alternar a exibição do menu 
+  /* Exemplo: */
+  /* .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    color: #4e2a1e;
+  }
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px; // Altura do header
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    // Escondido por padrão, mostrado com JS
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-out;
+  }
+  .nav-mobile.is-open {
+    transform: scaleY(1);
+  }
+  .nav-mobile a {
+    padding: 10px 20px;
+    text-align: center;
+    color: #4e2a1e;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .nav-mobile a:last-child {
+    border-bottom: none;
+  } */
+}
+
+/* Galeria */
+.gallery {
+  padding: 2rem 0;
+}
+
+.gallery__wrapper {
+  position: relative; /* Contêiner para posicionar as setas */
+  overflow: hidden; /* Esconde a parte da galeria que está fora da tela */
+}
+
+.gallery__grid {
+  display: flex; /* Alinha as imagens horizontalmente */
+  gap: 0.5rem;
+  overflow-x: auto; /* Permite a rolagem horizontal com o mouse/toque */
+  scroll-snap-type: x mandatory; /* Para a rolagem "grudar" nas imagens */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth; /* Animação suave ao rolar */
+}
+
+.gallery__grid img {
+  flex-shrink: 0; /* Impede que as imagens encolham */
+  width: 100%;
+  max-width: 300px; /* Ajuste o tamanho da imagem na galeria */
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  scroll-snap-align: start; /* O ponto onde a rolagem "gruda" */
+  border-radius: 12px;
+}
+
+/* Esconder a barra de rolagem em navegadores */
+.gallery__grid::-webkit-scrollbar {
+  display: none;
+}
+.gallery__grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Botões de navegação */
+.gallery__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  background: rgba(106, 90, 90, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--brand); /* Cor da seta */
+  transition: transform 0.2s, background 0.2s;
+}
+
+.gallery__btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery__btn--prev {
+  left: -20px; /* Posição para a seta esquerda */
+}
+
+.gallery__btn--next {
+  right: -20px; /* Posição para a seta direita */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 860px) {
+  .gallery__grid {
+    /* Em telas menores, o layout de rolagem horizontal é mais adequado */
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+  }
+  .gallery__grid img {
+    width: 85%; /* As imagens ocupam mais espaço em mobile */
+  }
+  .gallery__btn {
+    display: block; /* Mantenha os botões visíveis */
+  }
+}
+
+.video-destaque {
+  display: block;        /* Faz ocupar uma linha só */
+  max-width: 50%;        /* Limita largura máxima (80% da tela) */
+  height: auto;          /* Mantém proporção */
+  margin: 2rem auto;     /* Centraliza com margem */
+  border-radius: 12px;   /* Cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Sombra elegante */
+}
+.video-banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fffaf7; /* fundo suave, pode trocar */
+}
+
+.video-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4b2e2e; /* tom chocolate */
+}
+.video-container {
+  max-width: 40%;      /* ocupa toda a largura da seção */
+  margin: 0;            /* remove centralização */
+  text-align: left;     /* força alinhamento à esquerda */
+}
+
+.video-container video {
+  width: 70%;           /* largura do vídeo (ajuste conforme quiser: 60%, 80%, etc.) */
+  height: auto;         /* mantém proporção */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+header.hidden {
+  top: -120px; /* ajuste conforme altura do header */
+}
+
+body {
+  padding-top: 80px; /* espaço pro header fixo */
+}
