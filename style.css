@@ -330,3 +330,159 @@ body { padding-top: 110px; /* ajustável conforme altura real do seu header */ }
   transition: all 0.3s ease;
 }
 .botao-fixo:hover { transform: scale(1.05); background: linear-gradient(90deg, #4e2a1e, #7b4a34); }
+
+/* Botão padrão */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+/* Botão principal - tema chocolate */
+.btn--primary {
+  background: linear-gradient(135deg, #4b2e2e, #7a4a3b); /* chocolate escuro → chocolate ao leite */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, #7a4a3b, #4b2e2e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Para o botão simples do pacote corporativo */
+.price-card .btn {
+  background: #e4d2c1; /* tom caramelo suave */
+  color: #4b2e2e;
+}
+
+.price-card .btn:hover {
+  background: #d4c1b0;
+  transform: translateY(-2px);
+}
+/* Hero da página Sobre */
+.sobre-hero {
+  background: linear-gradient(135deg, #4b2e2e, #7a4a3b);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sobre-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sobre-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Conteúdo */
+.sobre-conteudo {
+  padding: 60px 20px;
+}
+
+.sobre-conteudo h2 {
+  color: #4b2e2e;
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+
+.sobre-conteudo p {
+  margin: 15px 0;
+  line-height: 1.7;
+}
+
+.sobre-lista {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.sobre-lista li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+/* === PÁGINA DE CONTATO === */
+
+.contato {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.contato h1 {
+  font-size: 2.5rem;
+  color: #533018; /* chocolate escuro */
+  margin-bottom: 10px;
+}
+
+.contato__desc {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #64432b;
+}
+
+.contato__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.contato__card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 2px solid #f3e5d8;
+  transition: 0.3s;
+}
+
+.contato__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.contato__card h2 {
+  color: #533018;
+  margin-bottom: 10px;
+}
+
+.contato__card p {
+  color: #6e4a2d;
+  font-size: 0.95rem;
+}
+
+.contato__btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.contato__info,
+.contato__link {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #533018;
+  display: block;
+}
+
+.contato__link:hover {
+  text-decoration: underline;
+}
+
+nav .active {
+  font-weight: 700;
+  color: #533018;
+}

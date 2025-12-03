@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós — Doce Cascata</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Doce Cascata">
+    </div>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#pacotes">Pacotes</a>
+      <a href="index.html#galeria">Galeria</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="sobre-hero">
+    <div class="container">
+      <h1>Sobre a Doce Cascata</h1>
+      <p>Transformando eventos em momentos deliciosos desde o primeiro dia.</p>
+    </div>
+  </section>
+
+  <section class="sobre-conteudo container">
+    <h2>Nossa História</h2>
+    <p>
+      A <strong>Doce Cascata</strong> nasceu com o propósito de levar experiências
+      únicas e saborosas para eventos de todos os tipos — festas de aniversário,
+      casamentos, eventos corporativos e celebrações especiais.
+    </p>
+
+    <p>
+      Trabalhamos com <strong>chocolate nobre</strong> e acompanhamentos
+      selecionados, garantindo qualidade, higiene e um atendimento impecável
+      que conquista nossos clientes.
+    </p>
+
+    <h2>Nossa Missão</h2>
+    <p>
+      Proporcionar momentos inesquecíveis através de um serviço de buffet
+      de chocolate de alta qualidade, com profissionalismo e carinho em cada detalhe.
+    </p>
+
+    <h2>Por que escolher a Doce Cascata?</h2>
+
+    <ul class="sobre-lista">
+      <li>🍫 Chocolate nobre premium</li>
+      <li>🍓 Acompanhamentos frescos selecionados</li>
+      <li>👩‍🍳 Equipe treinada e profissional</li>
+      <li>✨ Montagem completa no local</li>
+      <li>🧼 Máxima higiene e segurança</li>
+      <li>🎉 Experiência personalizada para o seu evento</li>
+    </ul>
+
+    <a href="https://wa.me/551999383908?text=Olá! Quero saber mais sobre a Doce Cascata" class="btn btn--primary">
+      Falar Conosco no WhatsApp
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="ano"></span> Doce Cascata — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
